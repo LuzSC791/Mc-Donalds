@@ -1,0 +1,218 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    background:#fff;
+}
+
+.container
+{
+    width: 63%;
+    position: relative;
+    margin: 5px auto;
+}
+
+img.logo
+{
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    padding: 6px;
+}
+
+h1
+{
+    position: relative;
+    text-align:right;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(37, 37, 37);
+    padding:20px 0 50px;
+
+}
+
+.slider
+{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;/* Ocultaremos los elementos fuera (imagenes) */
+    box-shadow: 0 9px 15px rgba(31, 30, 30, 0.747); 
+}
+
+.slider ul /* Quita el relleno de la foto */
+{    
+    display: flex; /* Imagen a lado de otra flex */
+    padding: 0;
+    width: 400%; /* Pusimos 100 por cada imagen */ 
+    /* ANUMACIÓN cambio - repetición */
+    animation: cambio 20s infinite;
+    animation-direction:alternate; /*o podemos colocarle animation: cambio 20s infinite alternate;*/
+    animation-timing-function: ease-in;/* Animación sea mas lenta */
+}
+
+.slider li
+{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img
+{
+    width: 100%;
+    border: 7px solid #fff;
+}
+
+/* Poner una imagen a un lado de otra para que el ul sea el que se mueve y muestre
+las diversas imagenes (OCUPAMOS flex)*/
+
+/* keyframes: Son las paradas */
+
+@keyframes cambio /*Le dara las paradas a cambio*/
+{
+    /* Tiempo que estara la imagen multiplicamos 20 * 0.2 = 4s */
+    0% {margin-left:0;}
+    20% {margin-left:0;}
+    /* El espacio entre 20% y 25%  es el tiempo que tardara la transacion 20 * 0.05 = 1s*/
+    25% {margin-left:-100%;}
+    45% {margin-left:-100%;}
+    
+    50% {margin-left:-200%;}
+    70% {margin-left:-200%;}
+    
+    75% {margin-left:-300%;}
+    100% {margin-left:-300%;}
+
+    /* y asi tenemos que cada imagen estara 4s */
+    /* Para evitar el cambio brusco podemos colocar animation-direction:alternate; */
+}
+
+h2
+{
+    padding: 20px 0 5px;
+    color: rgb(180, 7, 7);
+    font-size: 30px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h3
+{
+    padding: 20px 0 0 40px;
+    color: #474545;
+    font-size: 25px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form
+{
+    width:100%;
+    height:600px;
+    background: rgba(196, 192, 192, 0.199);
+    border-radius: 20px;
+    color: #474545;
+}
+
+.politicas
+{
+    width:100%;
+    height:180px;
+    display: flex;
+    background: rgba(196, 192, 192, 0.199);
+    border-radius: 20px;
+}
+
+.check
+{
+    width: 50px;
+    height: 200px;
+    margin: 40px auto;
+    border: 1px solid red;
+}
+.cont-politicas
+{
+    width:85%;
+    padding: 15px 40px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.caja-factura
+{
+    width: 165px;
+    height: 45px;
+    border:none;
+    text-align: center;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 5px;
+    font-size: 15px;
+}
+#info-ticket
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 30px 40px;
+    grid-template-rows: 170px 80px;   
+}
+
+.ver-ejemplo-button
+{
+    width: 160px;
+    height: 45px;
+    background:rgba(255, 123, 0, 0.603);
+    color: red;
+    font-size: 18px;
+    border-radius: 5px;
+    border:none;
+}
+
+.form-two
+{
+    padding-top: 30px;
+}
+
+#info-receptor
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px 40px;
+    grid-template-rows: 170px 80px;     
+}
+
+.cont-politicas a
+{
+    text-decoration: none;
+    color: rgb(180, 7, 7);
+}
+
+.button-fac
+{
+    /* arriba y abajo - a los lados */
+    padding:35px 340px;
+}
+
+.facturacion-button
+{
+    width: 190px;
+    height: 55px;
+    border:none;
+    background:rgba(255, 123, 0, 0.623);
+    color: red;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.soluciones-fiscales 
+{
+    background:#000000;
+    width:100%;
+    height:100px;
+}
+
+.soluciones-fiscales p
+{
+    color:#fff;
+    padding: 50px 0 0 520px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
